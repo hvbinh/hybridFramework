@@ -1,3 +1,4 @@
 .idea/*
 *.class
 target/test-classes/META-INF/HybridFramework.kotlin_module
+target/
