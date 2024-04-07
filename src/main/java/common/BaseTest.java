@@ -1,5 +1,7 @@
 package common;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,9 +15,10 @@ public class BaseTest {
     private WebDriver driver;
     private String projectFolder = System.getProperty("user.dir");
     private String osName = System.getProperty("os.name");
+    protected final Logger log;
 
     protected BaseTest() {
-
+        log = LogManager.getLogger(getClass());
     }
 
     protected synchronized WebDriver getBrowserDriver(String browserName, String url) {

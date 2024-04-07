@@ -30,9 +30,10 @@ public class Registration extends BaseTest {
 
         driver = getBrowserDriver(browser, url);
 
-
+        log.info("click to register");
         driver.findElement(By.xpath("//a[text()='Register']")).click();
 
+        log.info("click to gender male radio");
         driver.findElement(By.id("gender-male")).click();
         driver.findElement(By.id("FirstName")).sendKeys(firstName);
         driver.findElement(By.id("LastName")).sendKeys(lastName);
