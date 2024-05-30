@@ -10,25 +10,15 @@
             <PatternLayout pattern="${pattern}" />
         </Console>
 
-        <File name="FixedFile" fileName="logs/Fixed.log" append="true">
-            <PatternLayout pattern="${pattern}" />
-        </File>
-
         <File name="RandomFile" fileName="logs/${random}.log" immediateFlush="false" append="true">
             <PatternLayout pattern="${pattern}" />
         </File>
-
-        <TestNGAppender name="TestAppender">
-            <PatternLayout pattern="${pattern}" />
-        </TestNGAppender>
     </Appenders>
 
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="FixedFile"/>
             <AppenderRef ref="RandomFile"/>
-<!--            <AppenderRef ref="TestAppender" />-->
         </Root>
     </Loggers>
 </Configuration>

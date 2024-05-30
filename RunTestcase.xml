@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <listeners>
+        <listener class-name="reportconfig.AllureTestListener"></listener>
+    </listeners>
     <test verbose="2" preserve-order="true" name="D:/Workspace Intel/HybridFramework">
         <parameter name="browser" value="CHROME_UI"/>
         <parameter name="url" value="http://demo.nopcommerce.com/"/>
